@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MediTrack</title>
+</head>
+<body>
+    <h1>💊 MediTrack - Medicine List</h1>
+
+    <a href="/add">➕ Add New Medicine</a>
+    <br><br>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Expiry Date</th>
+        </tr>
+
+        {% for med in medicines %}
+        <tr>
+            <td>{{ med["id"] }}</td>
+            <td>{{ med["name"] }}</td>
+            <td>{{ med["quantity"] }}</td>
+            <td>{{ med["expiry_date"] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
